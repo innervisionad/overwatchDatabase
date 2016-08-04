@@ -1,0 +1,63 @@
+﻿
+@model IEnumerable<MVCProject2.heroBoard>
+@{
+    ViewBag.Title = "Index";
+}
+<div class="text-center">
+    <img src="~/Images/overwatchLogo.png" />
+</div>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.ActionLink("Recruit new Hero", "Create", "", new { @class = "button" })
+        Class: @Html.DropDownList("heroClass", "All")
+        Name: @Html.TextBox("searchString")
+        <input type="submit" value="Filter" class="button" />
+    </div>
+}
+
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Difficulty)
+        </th>
+        <th>
+            @*this <th> is to add the grey Css colour to occupy the top right corner of the table in the index*@
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="namePlate">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Difficulty)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { Id = item.Id }, new { @class = "tableButton" })
+                @Html.ActionLink("Details", "Details", new { Id = item.Id }, new { @class = "tableButton" })
+                @Html.ActionLink("Delete", "Delete", new { Id = item.Id }, new { @class = "tableButton" })
+            </td>
+        </tr>
+    }
+
+</table>

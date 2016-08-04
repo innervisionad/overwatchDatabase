@@ -1,0 +1,60 @@
+﻿@model MVCProject2.heroBoard
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to discharge this hero?</h3>
+<div>
+<h4>Hero</h4>
+<hr />
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.Name)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Class)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Class)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Difficulty)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Difficulty)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Description)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Description)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Story)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Story)
+    </dd>
+
+</dl>
+
+    @using (Html.BeginForm())
+    {
+        <div>
+            <span>
+                <input type="submit" value="Delete" class="button" />
+            </span>
+        
+            <span>
+                @Html.ActionLink("Back to Hero Roster", "Index", "", new { @class = "button" })
+            </span>
+          
+        </div>
+    }
+</div>

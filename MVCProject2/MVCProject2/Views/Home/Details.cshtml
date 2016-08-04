@@ -1,0 +1,75 @@
+﻿@model MVCProject2.heroBoard
+
+@{
+    ViewBag.Title ="Hero Profile";
+}
+
+<h2>Hero Profile</h2>
+
+<div>
+    <hr />
+    <div class="container">
+        <div class="row">
+                <div class="col-md-6 col-md-offset-2 detailText">
+                    <div class="infoTitle">
+                        <span>
+                            @Html.DisplayNameFor(model => model.Name) :
+                        </span>
+                            @Html.DisplayFor(model => model.Name)
+                    </div>
+                    <div class="infoTitle">
+                        <span >
+                            @Html.DisplayNameFor(model => model.Class) :
+                        </span>
+                            @Html.DisplayFor(model => model.Class)
+                    </div>
+                    <div class="infoTitle">
+                        <span class="infoTitle">
+                            @Html.DisplayNameFor(model => model.Difficulty) :
+                        </span>
+                        @Html.DisplayFor(model => model.Difficulty)
+                    </div>  
+                             
+                    <br />
+
+                    <div class="infoTitle">
+                        <span>
+                            @Html.DisplayNameFor(model => model.Description)                            
+                        </span>                
+                    </div>              
+                    @Html.DisplayFor(model => model.Description)
+                       
+                    <div class="infoTitle">
+                        <span>
+                            @Html.DisplayNameFor(model => model.Story)
+                        </span>           
+                    </div>
+                    @Html.DisplayFor(model => model.Story) 
+                     
+          
+     
+            </div>
+            <br  />
+            <div class="col-md-5 characterPortrait">
+                <img src="@Url.Content(Model.Picture)" height="650" />
+            </div>
+
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2 buttonOrder">
+                <span>
+                    @Html.ActionLink("Edit", "Edit", new { Id = Model.Id }, new { @class = "button" })
+                </span>
+                <span>
+                    @Html.ActionLink("Back to Hero Roster", "Index", "", new { @class = "button" })
+                </span>    
+            </div>
+        </div>
+        <br />
+        <div class="text-center">
+          
+        </div>       
+    </div>
+  
+</div>

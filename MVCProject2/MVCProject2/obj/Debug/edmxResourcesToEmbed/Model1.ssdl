@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="gameDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="heroBoard">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" Nullable="false" />
+    <Property Name="Class" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+    <Property Name="Difficulty" Type="int" Nullable="false" />
+    <Property Name="Story" Type="varchar(max)" />
+    <Property Name="Picture" Type="text" />
+  </EntityType>
+  <EntityContainer Name="gameDatabaseModelStoreContainer">
+    <EntitySet Name="heroBoard" EntityType="Self.heroBoard" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

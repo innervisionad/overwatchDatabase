@@ -1,0 +1,110 @@
+﻿@font-face {
+    font-family: 'big_noodle_titling_oblique';
+    src: url('../fonts/big_noodle_titling_oblique.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'big_noodle_titling';
+    src: url('../fonts/big_noodle_titling.ttf') format('truetype');
+}
+
+body{
+    background-image:url(../Images/backgroundImageV2.png);
+    background-attachment:fixed;
+    opacity: 0.8;
+}
+
+table td {
+    border:solid 2px white;
+    padding: 5px;
+    padding-left:4px;
+    padding-right: 4px;
+    color:antiquewhite;
+    text-align:left;
+    font-weight:bolder;
+    background-color:rgba(0, 0, 0, 0.81);   
+}
+
+th {
+    color:rgb(249, 158, 26);
+    font-family:big_noodle_titling_oblique;
+    font-size: 25px;
+    letter-spacing:0.1em;
+    background-color:rgba(0, 0, 0, 0.81);
+    padding: 5px;
+        padding-left:4px;
+    padding-right: 4px;
+    text-align: center;
+}
+
+.characterPortrait {
+    position:fixed;
+    right:80px;
+    opacity: .7;
+    z-index:1;
+}
+
+.infoTitle {
+    color:rgba(249, 158, 26, 0.9);
+    font-family:big_noodle_titling_oblique;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.infoTitle span {
+     color:aliceblue;
+    font-family:big_noodle_titling_oblique;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.detailText {
+    color: rgb(249, 158, 26);
+    letter-spacing:1px;
+    font-size:20px;
+    word-spacing:2px;
+    font-weight: bolder;
+    z-index: 2;
+    background-image:url(../Images/buttonBackground.png);
+    border-radius:10px;
+    padding-bottom:10px;
+    font-family:big_noodle_titling;
+    opacity: .87;
+}
+
+.button {
+    border: solid 2px rgb(249, 158, 26);
+    border-radius: 5px 20px 5px;
+    padding: 10px;
+    margin: 7px;
+    background-image:url(../Images/buttonBackground.png);
+    color:rgb(249, 158, 26);
+    letter-spacing:1px;
+    font-family:big_noodle_titling;
+    font-size:20px;
+}
+
+.button:hover{
+    color:rgb(249, 158, 26);
+    text-decoration:underline;
+}
+
+
+.namePlate {
+    color:rgba(249, 158, 26, 0.9);
+    font-family:big_noodle_titling_oblique;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.tableButton{
+    color:rgb(249, 158, 26);
+}
+
+.tableButton:hover {
+    color:rgb(249, 158, 26);
+    text-decoration:underline;
+}
+
+.buttonOrder {
+    z-index:2;
+}
